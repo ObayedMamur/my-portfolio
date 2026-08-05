@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+  background: #f8fafc;
+  color-scheme: light;
+}
+
+html.dark {
+  background: #0f172a;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+.code-scroll {
+  scrollbar-color: #475569 #0d1117;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+.code-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.code-scroll::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #475569;
+  border: 2px solid #0d1117;
+  border-radius: 999px;
+}
+
+.code-scroll::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.nav-scroll {
+  scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

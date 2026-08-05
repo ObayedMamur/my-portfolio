@@ -1,17 +1,37 @@
 ---
-
+import '../styles/global.css';
+import Portfolio from '../components/Portfolio.jsx';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Obayed Mamur, SQA Engineer and SDET specializing in scalable test automation." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        let savedTheme = null;
+
+        try {
+          savedTheme = localStorage.getItem('portfolio-theme');
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        root.classList.toggle('dark', isDark);
+        root.style.colorScheme = isDark ? 'dark' : 'light';
+      })();
+    </script>
+    <title>Obayed Mamur | SQA Engineer &amp; SDET</title>
+  </head>
+  <body>
+    <Portfolio client:load />
+  </body>
 </html>

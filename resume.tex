@@ -1,0 +1,114 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- Packages ---
+\usepackage[margin=0.5in]{geometry} % 0.5 inch margins
+\usepackage[default]{notosans}      % Modern, clean, ATS-friendly font
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% --- Hyperlink Setup ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue, % Links will be blue to signify clickability
+}
+
+% --- Custom Formatting ---
+\titleformat{\section}{\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{4pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{4pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label={-}, itemsep=3pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{4pt}}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{Your Name}} \\ \vspace{6pt}
+    SQA Engineer / SDET \\ \vspace{6pt}
+    City, Country \quad \href{mailto:email@example.com}{email@example.com} \quad +1-234-567-8900 \\ \vspace{4pt}
+    \href{https://linkedin.com/in/yourprofile}{\textbf{LinkedIn}} \quad | \quad 
+    \href{https://github.com/yourprofile}{\textbf{GitHub}} \quad | \quad 
+    \href{https://yourportfolio.com}{\textbf{Portfolio}}
+\end{center}
+
+% --- Professional Summary ---
+\section{Professional Summary}
+Senior Software Development Engineer in Test (SDET) with 6+ years of experience designing and scaling automated test frameworks for complex web applications. Expert in TypeScript, Playwright, and CI/CD integrations. Proven track record of reducing regression testing cycles by 90\% and implementing performance engineering standards. Adept at leveraging AI to optimize test coverage and shift-left quality practices.
+
+% --- Technical Skills ---
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=6pt]
+    \item \textbf{Languages:} TypeScript, JavaScript (ES6+), Python, SQL
+    \item \textbf{Test Automation Frameworks:} Playwright, Cypress, Selenium WebDriver, Appium, Jest
+    \item \textbf{Performance \& API Testing:} k6, Postman, JMeter, REST Assured, GraphQL
+    \item \textbf{CI/CD \& Cloud:} GitHub Actions, Jenkins, Docker, AWS (EC2, S3), Linux/Unix
+    \item \textbf{Methodologies \& Tools:} Agile/Scrum, BDD/TDD, Jira, Git, Web Content Accessibility Guidelines (WCAG)
+\end{itemize}
+
+% --- Professional Experience ---
+\section{Professional Experience}
+\begin{itemize}[leftmargin=0in, label={}]
+
+    \resumeSubheading
+      {Senior SDET}{May 2020 -- Present}
+      {Startise}{City, Country}
+      \resumeItemListStart
+        \item Architected and maintained a scalable end-to-end test automation framework using Playwright and TypeScript, reducing regression testing time by 90\%.
+        \item Developed customized LLM-based testing utilities to analyze product requirements and auto-generate edge cases, improving test coverage by 40\%.
+        \item Integrated automated performance benchmarking using k6 into GitHub Actions CI/CD pipelines to prevent latency degradation in production environments.
+        \item Mentored junior QA engineers in test automation best practices, clean code principles, and advanced locator strategies.
+        \item Collaborated directly with DevOps to containerize testing environments using Docker, ensuring 100\% environment parity across staging and production.
+      \resumeItemListEnd
+
+    % Add older jobs here by copying the \resumeSubheading block
+
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+\begin{itemize}[leftmargin=0in, label={}]
+
+    \resumeProjectHeading
+      {Automated Load Testing Suite (k6, GitHub Actions)}{2023}
+      \resumeItemListStart
+        \item Designed a modular load testing architecture capable of simulating 10,000+ virtual users against microservices.
+        \item Configured automated Slack alerts for CI/CD pipeline triggers whenever API response times exceeded the 200ms threshold during deployment checks.
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Interactive E2E Portfolio Test Runner (React, Playwright)}{2024}
+      \resumeItemListStart
+        \item Built an interactive terminal simulation in React to demonstrate functional Playwright and k6 tests running against a live DOM structure.
+      \resumeItemListEnd
+
+\end{itemize}
+
+% --- Education ---
+\section{Education}
+\begin{itemize}[leftmargin=0in, label={}]
+  \resumeSubheading
+    {Bachelor of Science in Computer Science}{Graduation Year}
+    {University Name}{City, Country}
+\end{itemize}
+
+\end{document}
