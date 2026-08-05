@@ -629,7 +629,7 @@ export default function App() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mb-6"
             >
-              <h1 className="text-5xl sm:text-6xl font-playfair font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+              <h1 className="text-5xl sm:text-5xl font-playfair font-bold text-slate-900 dark:text-slate-100 tracking-tight">
                 <a
                   href="/"
                   className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300"
@@ -643,7 +643,7 @@ export default function App() {
               initial={false}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-2 text-lg sm:text-xl font-montserrat font-medium text-slate-700 dark:text-slate-300 tracking-wide uppercase"
+              className="mt-2 text-lg sm:text-xl font-montserrat font-medium text-slate-700 dark:text-slate-300 tracking-wide"
             >
               <TypewriterEffect text={portfolioData.personal.title} />
             </motion.h2>
